@@ -178,13 +178,28 @@ unsloth
 tqdm
 numpy
 scipy
-```
+
+## Trained Adapters
+
+All four LoRA adapters are available as a single Kaggle dataset:
+
+**[kaggle.com/datasets/rrishavrraj/all-new-lora](https://www.kaggle.com/datasets/rrishavrraj/all-new-lora)**
+
+| Adapter | Manifold | Base Model | Domain |
+|---------|----------|------------|--------|
+| lora_B1 | Same-manifold | Qwen2.5-7B-Instruct | Instruction following |
+| lora_B2 | Same-manifold | Qwen2.5-7B-Instruct | Math reasoning |
+| lora_C1 | Cross-manifold | Qwen2.5-7B | Instruction following |
+| lora_C2 | Cross-manifold | Qwen2.5-7B | Math reasoning |
+
+Total size: 691MB (~170MB per adapter)  
+Config: r=16 · α=16 · dropout=0.0 · 7 modules · 1 epoch · 5,000 samples
 
 ---
 
 ## Thesis
 
-Full thesis PDF available in `/report/kd_ties_thesis.pdf`
+Full thesis PDF of my work Contact me at rrishavrraj@gmail.com
 
 **Title:** Cross-Manifold Task Vectors and TIES Degeneration in Knowledge Distillation Pipelines
 
