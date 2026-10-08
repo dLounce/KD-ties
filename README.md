@@ -8,12 +8,12 @@ This is my M.Sc. thesis at the Central University of Rajasthan (Dec 2025 to Jun 
 
 | # | Finding | Evidence |
 |---|---|---|
-| 1 | Distillation hurt math before any merge happened | The individual math adapters score 0.466 on GSM8K, against a 0.642 baseline |
+| 1 | Distillation hurt math before any merge happened | The individual math adapters score 0.466 on GSM8K, against a 0.632 baseline |
 | 2 | With cross-manifold adapters, sign conflict is 0.000 and TIES acts like plain averaging | CM-TIES and CM-Avg are within 0.006 on every benchmark, and identical on MMLU and HellaSwag |
 | 3 | In the standard setups, TIES never beats averaging by a significant margin | No pairwise difference exceeds 2×SE on any benchmark |
 | 4 | SC-TIES gives the only significant gain between methods | +0.017 MMLU over SM-TIES, against a threshold of 0.013 |
 | 5 | OP-TIES keeps commonsense best | HellaSwag 0.792, and subspace interference ρ₁₆ falls from 0.026 to 0.000 |
-| 6 | Merging several adapters recovers some math | CMAM scores 0.514 on GSM8K against 0.466 for the individual adapters, still below the 0.642 baseline |
+| 6 | Merging several adapters recovers some math | CMAM scores 0.514 on GSM8K against 0.466 for the individual adapters, still below the 0.632 baseline |
 
 ## The setup
 
@@ -107,7 +107,7 @@ TIES settings for every variant: retention density ρ = 0.70, sign election by t
 
 | Method | MMLU | HellaSwag | GSM8K | Sign conflict |
 |---|---|---|---|---|
-| Baseline | 0.713 | 0.786 | 0.642 | n/a |
+| Baseline | 0.713 | 0.786 | 0.632 | n/a |
 | SM-TIES | 0.699 ★ | 0.789 | 0.490 ★ | 0.221 |
 | SM-Avg | 0.696 ★ | 0.787 | 0.468 ★ | n/a |
 | CM-TIES | 0.706 | 0.781 | 0.480 ★ | 0.000 |
